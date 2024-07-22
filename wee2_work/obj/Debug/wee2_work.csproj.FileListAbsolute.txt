@@ -1,0 +1,7 @@
+C:\Users\USER\Desktop\week2_C_sharp\wee2_work\wee2_work\bin\Debug\wee2_work.exe.config
+C:\Users\USER\Desktop\week2_C_sharp\wee2_work\wee2_work\bin\Debug\wee2_work.exe
+C:\Users\USER\Desktop\week2_C_sharp\wee2_work\wee2_work\bin\Debug\wee2_work.pdb
+C:\Users\USER\Desktop\week2_C_sharp\wee2_work\wee2_work\obj\Debug\wee2_work.csproj.AssemblyReference.cache
+C:\Users\USER\Desktop\week2_C_sharp\wee2_work\wee2_work\obj\Debug\wee2_work.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\week2_C_sharp\wee2_work\wee2_work\obj\Debug\wee2_work.exe
+C:\Users\USER\Desktop\week2_C_sharp\wee2_work\wee2_work\obj\Debug\wee2_work.pdb
