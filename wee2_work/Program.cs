@@ -10,7 +10,83 @@ namespace wee2_work
     {
         static void Main(string[] args)
         {
-            //3-1 for 輸入10個整數，求其最小值
+            //3-1 例題 while 讀入五個整數，求這五個整數的和
+            //Console.WriteLine("請輸入五個數值。");
+
+            //int n = 5;
+            //int sum = 0;
+            //int i = 1;
+
+            //while (i <= n)
+            //{
+            //    Console.WriteLine($"第{i}個數值為");
+            //    int num = Convert.ToInt32(Console.ReadLine());
+            //    sum = sum + num; // 將輸入的數字加到 sum 中
+            //    i++; // 增加計數器 i
+            //}
+
+            //Console.WriteLine($"答案是{sum}");
+            //Console.ReadKey();
+
+
+            //3-2 例題 for 求N個整數的和，N由使用者輸入
+            //Console.WriteLine("請輸入要輸入的整數個數:");
+            //int n = Convert.ToInt32(Console.ReadLine());
+
+            //int sum = 0;
+
+            //for (int i = 1; i <= n; i++)
+            //{
+            //    Console.WriteLine($"第{i}個數值為:");
+            //    int num = Convert.ToInt32(Console.ReadLine());
+            //    sum += num; // 將輸入的數字加到 sum 中
+            //}
+
+            //Console.WriteLine($"答案是{sum}");
+            //Console.ReadKey();
+
+
+            //3-2 例題 while 求N個整數的和，N由使用者輸入
+            //Console.WriteLine("請輸入要輸入的整數個數:");
+            //int n = Convert.ToInt32(Console.ReadLine());
+
+            //int sum = 0;
+            //int i = 1;
+
+            //while (i <= n)
+            //{
+            //    Console.WriteLine($"第{i}個數值為:");
+            //    int num = Convert.ToInt32(Console.ReadLine());
+            //    sum = sum + num; // 將輸入的數字加到 sum 中
+            //    i++; // 增加計數器 i
+            //}
+
+            //Console.WriteLine($"答案是{sum}");
+            //Console.ReadKey();
+
+            //3-3例題 while 假設有N個正整數，求其中的最大值
+            //Console.WriteLine("請輸入整數:");
+            //int n = Convert.ToInt32(Console.ReadLine());
+
+            //int max = 0;
+            //int i = 1;
+
+            //while (i <= n)
+            //{
+            //    Console.WriteLine($"第{i}個值");
+            //    int num = Convert.ToInt32(Console.ReadLine());
+            //    if (num > max)
+            //    {
+            //        max = num;
+            //    }
+            //    i++; // 增加計數器 i
+            //}
+
+            //Console.WriteLine($"最大值為 {max}");
+            //Console.ReadKey();
+
+
+            //3-1習題 for 輸入10個整數，求其最小值
             //Console.WriteLine("請輸入10個整數：");
             //int MIN = int.MaxValue; // 初始化 MIN 為最大整數值 (int.MaxValue 表示 C# 中 32 位整數變量所能存儲的最大值。通過將 min 初始化為此值，我們可以保證第一個輸入整數將始終被視為迄今為止的最小值，然後我們可以在遇到任何後續輸入整數時更新 min 如果它們更小)
 
@@ -27,7 +103,176 @@ namespace wee2_work
             //Console.WriteLine($"最小值為: {MIN}");
             //Console.ReadKey();
 
-            //3-1 while 輸入10個整數，求其最小值
+
+            //3-4 例題 for 假設有N個正整數，求最大奇數值
+            //Console.WriteLine("請輸入正整數的個數:");
+            //int n = Convert.ToInt32(Console.ReadLine());
+
+            //int max = int.MinValue; // 初始化最大奇數值為最小整數值
+
+            //for (int i = 1; i <= n; i++)
+            //{
+            //    Console.WriteLine($"請輸入第{i}個值:");
+            //    int num = Convert.ToInt32(Console.ReadLine());
+            //    if (num % 2 != 0 && num > max) // 如果是奇數且大於目前的最大奇數值
+            //    {
+            //        max = num;
+            //    }
+            //}
+
+            //if (max == int.MinValue)
+            //{
+            //    Console.WriteLine("沒有輸入奇數。");
+            //}
+            //else
+            //{
+            //    Console.WriteLine($"最大奇數值為: {max}");
+            //}
+
+            //Console.ReadKey();
+
+
+            //3-4 例題 while 假設有N個正整數，求最大奇數值
+            //Console.WriteLine("請輸入正整數的個數:");
+            //int n = Convert.ToInt32(Console.ReadLine());
+
+            //int max = int.MinValue; // 初始化最大奇數值為最小整數值
+            //int i = 1;
+
+            //while (i <= n)
+            //{
+            //    Console.WriteLine($"請輸入第{i}個值:");
+            //    int num = Convert.ToInt32(Console.ReadLine());
+            //    if (num % 2 != 0 && num > max) // 如果是奇數且大於目前的最大奇數值
+            //    {
+            //        max = num;
+            //    }
+            //    i++; // 增加計數器 i
+            //}
+
+            //if (max == int.MinValue)
+            //{
+            //    Console.WriteLine("沒有輸入奇數。");
+            //}
+            //else
+            //{
+            //    Console.WriteLine($"最大奇數值為: {max}");
+            //}
+
+            //Console.ReadKey();
+
+            //3-5 例題 for 求N階層，即求123…N。請求輸入N，讓for迴圈自2依序乘到N
+            //Console.WriteLine("請輸入整數:");
+            //int n = Convert.ToInt32(Console.ReadLine());
+
+            //if (n < 0)        //如果 n 小於 0，則結束程式。這是因為階層只對非負整數定義（即 n >= 0）
+            //{
+            //    return;
+            //}
+            //int value = 1;
+            //for (int i = 2; i < n + 1; i++)   //使用 for 迴圈從 2 到 n 進行迭代，計算階層值 value *= i; 將 value 與當前的 i 相乘，並更新 value。這樣，每次迴圈都將 value 乘上 i。
+            //{
+            //    value *= i;
+            //}
+            //Console.WriteLine($"{n}階層為{value}");
+            //Console.ReadKey();
+
+
+            //3-5 例題 while 求N階層，即求123…N。請求輸入N，讓for迴圈自2依序乘到N
+            //Console.WriteLine("請輸入整數:");
+            //int n = Convert.ToInt32(Console.ReadLine());
+
+            //if (n < 0) // 如果 n 小於 0，則結束程式
+            //{
+            //    return;
+            //}
+
+            //int value = 1;
+            //int i = 2;
+
+            //// 使用 while 迴圈從 2 乘到 n
+            //while (i <= n)
+            //{
+            //    value *= i; // 將 value 與當前的 i 相乘，並更新 value
+            //    i++; // 增加計數器 i
+            //}
+
+            //Console.WriteLine($"{n} 階層為 {value}");
+            //Console.ReadKey();
+
+
+            //3-6 for 99乘法
+            //Console.WriteLine("99 乘法表:");
+            //for (int i = 1; i <= 9; i++)
+            //{
+            //    for (int j = 1; j <= 9; j++)
+            //    {
+            //        int result = i * j;
+            //        Console.WriteLine($"{i}*{j}={result}");
+            //    }
+            //}
+            //Console.ReadKey();
+
+            //3-6 while 99乘法
+            //Console.WriteLine("99 乘法表:");
+
+            //int i = 1; // 初始化外層計數器
+            //while (i <= 9)
+            //{
+            //    int j = 1; // 初始化內層計數器
+            //    while (j <= 9)
+            //    {
+            //        int result = i * j;
+            //        Console.WriteLine($"{i}*{j}={result}");
+            //        j++; // 增加內層計數器
+            //    }
+            //    i++; // 增加外層計數器
+            //}
+
+            //Console.ReadKey();
+
+
+            //3-7 for 99乘法改寫輸出排版
+            //Console.WriteLine("99 乘法表:");
+            //for (int i = 1; i <= 9; i++)
+            //{
+            //    for (int j = 1; j <= 9; j++)
+            //    {
+            //        int result = i * j;
+            //        // 打印每一個乘法表的元素
+            //        // 使用 \t 來對齊結果
+            //        Console.Write($"{i}*{j}={result}\t");
+            //    }
+            //    // 每行結束後換行
+            //    Console.WriteLine();
+            //}
+            //Console.ReadKey();
+
+
+            //3-7 while 99乘法改寫輸出排版
+            //Console.WriteLine("99 乘法表:");
+
+            //int i = 1;
+            //// 外層 while 迴圈控制行數
+            //while (i <= 9)
+            //{
+            //    int j = 1;
+            //    // 內層 while 迴圈控制列數
+            //    while (j <= 9)
+            //    {
+            //        int result = i * j;
+            //        // 打印每一個乘法表的元素
+            //        Console.Write($"{i}*{j}={result}\t");
+            //        j++;
+            //    }
+            //    // 每行結束後換行
+            //    Console.WriteLine();
+            //    i++;
+            //}
+            //Console.ReadKey ();
+
+
+            //3-1 習題 while 輸入10個整數，求其最小值
             //Console.WriteLine("請輸入10個整數：");
             //int min = int.MaxValue;
             //int count = 1;
@@ -49,7 +294,7 @@ namespace wee2_work
             //Console.ReadKey();
 
 
-            //3-2 for 輸入N個整數，求其最小值
+            //3-2 習題 for 輸入N個整數，求其最小值
             //Console.WriteLine("請輸入整數數量：");        //要求輸入N個數值
             //int n = Convert.ToInt32(Console.ReadLine());
 
@@ -69,7 +314,7 @@ namespace wee2_work
             //Console.ReadKey();
 
 
-            //3-2 while 輸入N個整數，求其最小值
+            //3-2 習題 while 輸入N個整數，求其最小值
             //Console.WriteLine("請輸入整數數量：");        //要求輸入N個數值
             //int n = Convert.ToInt32(Console.ReadLine());
             //int count = 0;
@@ -91,7 +336,7 @@ namespace wee2_work
             //Console.ReadKey();
 
 
-            //3-3 for輸入10個整數，列出其中所有大於12的數字。
+            //3-3 習題 for輸入10個整數，列出其中所有大於12的數字。
 
             // 宣告一個空字串變數來儲存大於12的數字
             //string output = "";
@@ -126,7 +371,7 @@ namespace wee2_work
             //Console.ReadKey();
 
 
-            //3-3 while 輸入10個整數，列出其中所有大於12的數字。
+            //3-3 習題 while 輸入10個整數，列出其中所有大於12的數字。
             // 宣告一個空字串變數來儲存大於12的數字
             //string output = "";
 
@@ -161,7 +406,7 @@ namespace wee2_work
             //Console.ReadKey();
 
 
-            //3-4 for 輸入10個整數，列出其中所有大於12的數字的總和。
+            //3-4 習題 for 輸入10個整數，列出其中所有大於12的數字的總和。
             // 宣告一個空字串變數來儲存大於12的數字，以及一個整數變數來儲存總和
             //string output = "";
             //int sum = 0;
@@ -198,7 +443,7 @@ namespace wee2_work
             //Console.ReadKey();
 
 
-            //3-4 while 輸入10個整數，列出其中所有大於12的數字的總和。
+            //3-4 習題 while 輸入10個整數，列出其中所有大於12的數字的總和。
             // 宣告一個空字串變數來儲存大於12的數字，以及一個整數變數來儲存總和
             //string output = "";
             //int sum = 0;
@@ -236,7 +481,7 @@ namespace wee2_work
             //Console.ReadKey();
 
 
-            //3-5 for輸入N個數字，求其所有奇數中的最大值。例如輸入11,12,3,24,15，答案是15
+            //3-5 習題 for輸入N個數字，求其所有奇數中的最大值。例如輸入11,12,3,24,15，答案是15
             // 讀取數字的數量
             //Console.WriteLine("請輸入數字的數量：");
             //int n = Convert.ToInt32(Console.ReadLine());
@@ -276,7 +521,7 @@ namespace wee2_work
             //Console.ReadKey();
 
 
-            //3-5 while輸入N個數字，求其所有奇數中的最大值。例如輸入11,12,3,24,15，答案是15
+            //3-5 習題 while輸入N個數字，求其所有奇數中的最大值。例如輸入11,12,3,24,15，答案是15
             // 讀取數字的數量
             //Console.WriteLine("請輸入數字的數量:");
             //int N = Convert.ToInt32(Console.ReadLine());
@@ -315,7 +560,7 @@ namespace wee2_work
             //Console.ReadKey();
 
 
-            //3-6 for 輸入N個數字，求其所有正數之平方的加總。
+            //3-6 習題 for 輸入N個數字，求其所有正數之平方的加總。
             // 讀取數字的數量
             //Console.WriteLine("請輸入數字的數量：");
             //int N = Convert.ToInt32(Console.ReadLine());
@@ -342,7 +587,7 @@ namespace wee2_work
             //Console.ReadKey();
 
 
-            //3-6 while 輸入N個數字，求其所有正數之平方的加總。
+            //3-6 習題 while 輸入N個數字，求其所有正數之平方的加總。
             // 讀取數字的數量
             //Console.WriteLine("請輸入數字的數量 :");
             //int n = Convert.ToInt32(Console.ReadLine());
@@ -372,7 +617,7 @@ namespace wee2_work
             //Console.ReadKey();
 
 
-            //3-7  for輸入N個數字，其中有些是負數，將這些負數轉換成正數
+            //3-7 習題 for輸入N個數字，其中有些是負數，將這些負數轉換成正數
             // 讀取數字的數量
             //Console.WriteLine("請輸入數字的數量: ");
             //int n = Convert.ToInt32(Console.ReadLine());
@@ -392,7 +637,7 @@ namespace wee2_work
             //Console.ReadKey();
 
 
-            //3-7  while輸入N個數字，其中有些是負數，將這些負數轉換成正數
+            //3-7 習題 while輸入N個數字，其中有些是負數，將這些負數轉換成正數
             // 讀取數字的數量
             //Console.WriteLine("請輸入數字的數量 :");
             //int n = Convert.ToInt32(Console.ReadLine());
@@ -417,7 +662,7 @@ namespace wee2_work
             //Console.ReadKey();
 
 
-            //補充1 for 判斷101-200之間有多少個質數，並輸出所有質數
+            //補充1 習題 for 判斷101-200之間有多少個質數，並輸出所有質數
             //Console.WriteLine("101 到 200 之間的質數有:");
 
             //// 檢查從 101 到 200 的每一個數字
@@ -443,7 +688,7 @@ namespace wee2_work
             //}
             //Console.ReadKey();
 
-            // 補充1 while  判斷101-200之間有多少個質數，並輸出所有質數
+            // 補充1 習題 while  判斷101-200之間有多少個質數，並輸出所有質數
 
             //Console.WriteLine("101 到 200 之間的質數有:");
 
@@ -483,7 +728,7 @@ namespace wee2_work
             //Console.ReadKey();
 
 
-            //補充 2 for 輸入一個數，輸出其質因數
+            //補充 2 習題 for 輸入一個數，輸出其質因數
             //Console.WriteLine("請輸入一個正整數:");
             //int number = Convert.ToInt32(Console.ReadLine());
 
@@ -506,7 +751,7 @@ namespace wee2_work
             //Console.ReadKey();
 
 
-            //補充 2 while 輸入一個數，輸出其質因數
+            //補充 2 習題 while 輸入一個數，輸出其質因數
             //Console.WriteLine("請輸入一個正整數:");
             //int number = Convert.ToInt32(Console.ReadLine());
             //int divisor = 2;
@@ -527,7 +772,7 @@ namespace wee2_work
             //Console.ReadKey();
 
 
-            //補充3 for 求100到300中可以被3與7整除的個數。
+            //補充3 習題 for 求100到300中可以被3與7整除的個數。
             //int count = 0;
 
             //// 使用 for 迴圈遍歷 100 到 300 之間的數字
@@ -544,7 +789,7 @@ namespace wee2_work
             //Console.ReadKey();
 
 
-            //補充3 while 求100到300中可以被3與7整除的個數。
+            //補充3 習題 while 求100到300中可以被3與7整除的個數。
 
             //int count = 0;
             //int i = 100;
