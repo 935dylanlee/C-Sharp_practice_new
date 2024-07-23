@@ -809,6 +809,363 @@ namespace wee2_work
             //Console.WriteLine($"100 到 300 之間可以被 3 和 7 同時整除的數字個數是: {count}");
             //Console.ReadKey();
 
+            //4-1例題
+            //int specialNumber = -1; // 設定特殊數字，當輸入該數字時終止迴圈
+            //int input;
+
+            //Console.WriteLine("請輸入數字（輸入負數或特殊數字結束）：");
+
+            //while (true)
+            //{
+            //    input = Convert.ToInt32(Console.ReadLine());
+
+            //    // 判斷是否為特殊數字或負數
+            //    if (input == specialNumber || input < 0)
+            //    {
+            //        break; // 終止迴圈
+            //    }
+
+            //    // 處理正數的邏輯（這裡僅顯示輸入的數字）
+            //    Console.WriteLine($"你輸入的數字是: {input}");
+            //}
+
+            //Console.WriteLine("迴圈結束");
+            //Console.ReadKey();
+
+
+            //例題4-2
+            // 讀取兩個正整數
+            //Console.Write("請輸入第一個正整數：");
+            //int a = Convert.ToInt32(Console.ReadLine());
+            //Console.Write("請輸入第二個正整數：");
+            //int b = Convert.ToInt32(Console.ReadLine());
+
+            //// 初始化布林變數來控制迴圈
+            //bool validInput = true;
+
+            //// 處理特殊情況
+            //if (a == 0 && b == 0)
+            //{
+            //    Console.WriteLine("兩個數不能都為零。");
+            //    validInput = false; // 設置 validInput 為 false
+            //}
+            //else if (a == 0)
+            //{
+            //    Console.WriteLine($"最大公約數是 {Math.Abs(b)}");
+            //    validInput = false; // 設置 validInput 為 false
+            //}
+            //else if (b == 0)
+            //{
+            //    Console.WriteLine($"最大公約數是 {Math.Abs(a)}");
+            //    validInput = false; // 設置 validInput 為 false
+            //}
+
+            //// 使用 while 迴圈來計算最大公約數
+            //while (validInput && b != 0) // 當 validInput 為 true 且 b 不為 0 時繼續迴圈
+            //{
+            //    int remainder = a % b; // 計算 a 除以 b 的餘數
+            //    a = b; // 將 b 設為新的 a
+            //    b = remainder; // 將餘數設為新的 b
+            //}
+
+            //// 當 b 為 0 時，a 就是最大公約數
+            //if (validInput)
+            //{
+            //    Console.WriteLine($"最大公約數是 {Math.Abs(a)}");
+            //}
+
+            //Console.ReadKey();
+
+
+            //例題4-3
+            // 讀取要輸入的數字個數 N
+            //Console.Write("請輸入數字的個數 N：");
+            //int N = Convert.ToInt32(Console.ReadLine());
+
+            //// 檢查 N 是否為正數
+            //if (N <= 0)
+            //{
+            //    Console.WriteLine("N 必須是正整數。");
+            //    // 繼續執行程式碼，這裡可以加上提示或其他操作
+            //    Console.WriteLine("請重新啟動程式並輸入正整數。");
+            //}
+            //else
+            //{
+            //    int sum = 0; // 用來存儲數字的和
+            //    int i = 1;   // 計數器，從 1 開始
+
+            //    // 使用 while 迴圈讀取 N 個數字並計算和
+            //    while (i <= N)       //條件 i <= 當 i 超過 N 時，while 迴圈的條件不再滿足，迴圈自動終止，
+            //    {
+            //        Console.Write($"請輸入第 {i} 個數字：");
+            //        int num = Convert.ToInt32(Console.ReadLine());
+            //        sum += num; // 將輸入的數字加到和中
+            //        i++; // 計數器遞增
+            //    }
+            //    Console.WriteLine($"這 {N} 個數字的和是: {sum}");
+            //}
+
+            //Console.ReadKey();
+
+
+            //習題4-1  while寫一程式求N個數字的最大值。
+            // 讀取要輸入的數字個數 N
+            //Console.Write("請輸入數字的個數 N：");
+            //int N = Convert.ToInt32(Console.ReadLine());
+
+            //// 檢查 N 是否為正數
+            //if (N <= 0)
+            //{
+            //    Console.WriteLine("N 必須是正整數。");
+            //    Console.WriteLine("請重新啟動程式並輸入正整數。");
+            //}
+            //else
+            //{
+            //    int max = int.MinValue; // 初始化最大值為最小整數
+            //    int i = 1; // 計數器，從 1 開始
+
+            //    // 使用 while 迴圈讀取 N 個數字並找出最大值
+            //    while (i <= N)
+            //    {
+            //        Console.Write($"請輸入第 {i} 個數字：");
+            //        int num = Convert.ToInt32(Console.ReadLine());
+
+            //        // 檢查是否是目前的最大值
+            //        if (num > max)
+            //        {
+            //            max = num; // 更新最大值
+            //        }
+
+            //        i++; // 計數器遞增
+            //    }
+
+            //    // 輸出結果
+            //    Console.WriteLine($"這 {N} 個數字中的最大值是: {max}");
+            //}
+
+            //Console.ReadKey();
+
+
+            //習題4-2 while寫一程式求一個等差級數數字的和，一共有N個數字，程式應該輸入最小的起始值以及數字間的差。
+            //等差級數是一種數字序列，其中每個數字與前一個數字之間的差是固定的。這個固定的差叫做公差。比如說，如果你有一個數字序列，它的起始值是 2，每個數字之間的差是 3，那麼這個序列就是：2, 5, 8, 11, 14, …。
+            // 讀取等差級數的參數
+            //Console.Write("請輸入等差級數的起始值：");
+            //int start = Convert.ToInt32(Console.ReadLine());
+
+            //Console.Write("請輸入等差級數的間隔差：");
+            //int difference = Convert.ToInt32(Console.ReadLine());
+
+            //Console.Write("請輸入等差級數的項數 N：");
+            //int N = Convert.ToInt32(Console.ReadLine());
+
+            //// 檢查 N 是否為正數
+            //if (N <= 0)
+            //{
+            //    Console.WriteLine("N 必須是正整數。");
+            //    Console.WriteLine("請重新啟動程式並輸入正整數。");
+            //}
+            //else
+            //{
+            //    int sum = 0; // 初始化總和
+            //    int current = start; // 當前數字，從起始值開始
+            //    int count = 0; // 計數器，跟蹤已處理的數字數量
+
+            //    // 使用 while 迴圈計算等差級數的總和
+            //    while (count < N)
+            //    {
+            //        sum += current; // 將當前數字加入總和
+            //        current += difference; // 計算下一個數字
+            //        count++; // 計數器遞增
+            //    }
+
+            //    Console.WriteLine($"等差級數的總和是: {sum}");
+            //}
+
+            //Console.ReadKey();
+
+
+            //4-3 while寫一程式，讀入N個數字，然後找出所有小於13的數，再求這些數字的和
+            // 讀取數字的個數 N
+            //Console.WriteLine("請輸入數字的個數 N:");
+            //int N = Convert.ToInt32(Console.ReadLine());
+
+            //// 初始化變數
+            //int count = 0; // 用來計數已經處理的數字
+            //int sum = 0;   // 用來累加小於 13 的數字的總和
+
+            //// 當處理的數字數量小於 N
+            //while (count < N)
+            //{
+            //    Console.WriteLine($"請輸入第 {count + 1} 個數字:");
+            //    int num = Convert.ToInt32(Console.ReadLine());
+
+            //    // 檢查數字是否小於 13
+            //    if (num < 13)
+            //    {
+            //        sum += num; // 將小於 13 的數字加到總和中
+            //    }
+
+            //    count++; // 處理的數字數量增加 1
+            //}
+
+            //Console.WriteLine($"小於 13 的數字的總和是: {sum}");
+            //Console.ReadKey();
+
+
+            //4-4 while寫一程式，讀入N個數字，找到第一個大於7而小於10的數字就停止，而且列印出這個數字
+            // 讀取數字的個數 N
+            //Console.WriteLine("請輸入數字的個數 N:");
+            //int N = Convert.ToInt32(Console.ReadLine());
+
+            //int count = 0; // 用來計數已經處理的數字
+            //bool found = false; // 標記是否找到符合條件的數字
+
+            //while (count < N)
+            //{
+            //    Console.WriteLine($"請輸入第 {count + 1} 個數字:");
+            //    int num = Convert.ToInt32(Console.ReadLine());
+
+            //    // 檢查數字是否大於 7 而小於 10
+            //    if (num > 7 && num < 10)
+            //    {
+            //        Console.WriteLine($"找到符合條件的數字: {num}");
+            //        found = true; // 設置標記為已找到
+            //        break; // 找到符合條件的數字後停止迴圈
+            //    }
+
+            //    count++; // 處理的數字數量增加 1
+            //}
+
+            //// 如果沒有找到符合條件的數字
+            //if (!found)
+            //{
+            //    Console.WriteLine("沒有找到符合條件的數字。");
+            //}
+            //Console.ReadKey();
+
+
+            //4-5 while寫一程式，讀入a1,a2,…,a5和b1,b2,…,b5。找到第一個ai>bi，即停止，並列印出ai及bi
+            //int n = 5; // 一共要讀入 5 個數字
+            //int count = 0; // 用來計數已經處理的數字
+            //bool found = false; // 標記是否找到符合條件的數字
+
+            //Console.WriteLine("請輸入 a1 到 a5:");
+            //while (count < n)
+            //{
+            //    // 讀取 a 和 b 的數字
+            //    Console.Write($"a{count + 1}: ");
+            //    int a = Convert.ToInt32(Console.ReadLine());
+
+            //    Console.Write($"b{count + 1}: ");
+            //    int b = Convert.ToInt32(Console.ReadLine());
+
+            //    // 比較 ai 和 bi
+            //    if (a > b)
+            //    {
+            //        Console.WriteLine($"找到符合條件的數字: a{count + 1} = {a}, b{count + 1} = {b}");
+            //        found = true; // 設置標記為已找到
+            //        break; 
+            //    }
+
+            //    count++; // 處理的數字數量增加 1
+            //}
+
+            //// 如果沒有找到符合條件的數字
+            //if (!found)
+            //{
+            //    Console.WriteLine("沒有找到符合條件的數字。");
+            //}
+            //Console.ReadKey();
+
+            //補充1 漢堡
+            //// 讀取使用者輸入的時間（分鐘）
+            //Console.Write("請輸入Eric吃漢堡的時間（分鐘）=");
+            //int totalMinutes = Convert.ToInt32(Console.ReadLine());
+
+            //// 初始化變數
+            //int timeInterval = 5; // 每 5 分鐘吃一個漢堡
+            //int count = 0; // 記錄吃的漢堡數量
+            //int timeAccumulated = 0; // 記錄累計時間
+
+            //Console.WriteLine("吃漢堡的紀錄如下：");
+
+            //// 使用 while 迴圈來計算和顯示吃漢堡的時間
+            //while (totalMinutes >= timeInterval)
+            //{
+            //    // 每 5 分鐘吃一個漢堡
+            //    count++;
+            //    timeAccumulated += timeInterval;
+            //    totalMinutes -= timeInterval;
+
+            //    // 顯示當前漢堡的時間點
+            //    Console.WriteLine($"第 {count} 個漢堡，吃在 {timeAccumulated} 分鐘");
+            //}
+
+            //// 顯示總共吃了多少個漢堡和剩餘的時間
+            //Console.WriteLine($"總共吃了 {count} 個漢堡，共花了 {timeAccumulated} 分鐘，還剩下 {totalMinutes} 分鐘");
+
+            //Console.ReadKey();
+
+
+            //補充2 貸款還清
+            // 總貸款額（萬元）
+            //double loanAmount = 560; // 560萬元
+            //                         // 每月還款額（萬元）
+            //double monthlyPayment = 4; // 4萬元
+            //                           // 每12個月額外還款（萬元）
+            //double annualBonusPayment = 1; // 1萬元
+            //                               // 記錄已經還款的月份數
+            //int months = 0;
+
+            //// 使用 while 迴圈計算每月還款情況
+            //while (loanAmount > 0)
+            //{
+            //    // 每月還款
+            //    loanAmount -= monthlyPayment;
+            //    months++;
+
+            //    // 每12個月額外還款一次
+            //    if (months % 12 == 0)
+            //    {
+            //        loanAmount -= annualBonusPayment;
+            //    }
+            //}
+
+            //Console.WriteLine($"小明貸款買房花560萬，每個月可還4萬，每還12個月，因為年終獎金可以多還一萬，需要還款的總月數: {months}個月");
+            //Console.ReadKey();
+
+            //補充3 猜數字
+            // 初始化隨機數生成器
+            Random random = new Random();
+            // 生成一個1到100之間的隨機數字
+            int targetNumber = random.Next(1, 101);
+
+            int guess = 0;
+
+            Console.WriteLine("請猜一個1到100之間的數字：");
+
+            // 使用 while 迴圈讓使用者猜數字
+            while (guess != targetNumber)
+            {
+                // 讀取使用者輸入的數字
+                guess = Convert.ToInt32(Console.ReadLine());
+
+                if (guess < targetNumber)
+                {
+                    Console.WriteLine("太小了，再試一次！");
+                }
+                else if (guess > targetNumber)
+                {
+                    Console.WriteLine("太大了，再試一次！");
+                }
+                else
+                {
+                    Console.WriteLine("恭喜你，猜中了！");
+                }
+            }
+
+            Console.ReadKey();
+
         }
     }
 }
